@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Finance Advisor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>💰 AI Finance Advisor</h1>
+        <p class="subtitle">Track your expenses and get smart financial advice.</p>
+
+        <div class="card">
+            <h2>Add Expense</h2>
+
+            <input id="category" type="text" placeholder="Category (Food, Shopping...)">
+            <input id="amount" type="number" placeholder="Amount">
+            <input id="description" type="text" placeholder="Description">
+
+            <button onclick="addExpense()">Add Expense</button>
+        </div>
+
+        <div class="card">
+            <h2>Financial Summary</h2>
+
+            <button onclick="getSummary()">View Summary</button>
+
+            <div id="summary"></div>
+        </div>
+
+        <div class="card">
+            <h2>🤖 AI Financial Advice</h2>
+
+            <button onclick="getAdvice()">Get AI Advice</button>
+
+            <div id="advice"></div>
+        </div>
+
+        <div class="card">
+            <h2>📋 Your Expenses</h2>
+
+            <button onclick="getExpenses()">Refresh Expenses</button>
+
+            <div id="expenses"></div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
