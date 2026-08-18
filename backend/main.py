@@ -1,4 +1,5 @@
 from fastapi import FastAPI, Depends
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from sqlalchemy.orm import Session
 
@@ -7,6 +8,15 @@ from models import Expense
 
 
 app = FastAPI(title="AI Finance Advisor API")
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "https://ai-finance-advisor-1-3vm5.onrender.com"
+    ],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # Create database tables
 Base.metadata.create_all(bind=engine)
